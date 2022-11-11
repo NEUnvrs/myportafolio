@@ -114,33 +114,36 @@ h1 {
   background: rgb(16, 16, 16);
 }
 
-.bgimg {
-  width: 70%;
-  height: 85%;
+.container {
+  display: grid;
+}
+
+.container {
+  width: 65%;
+  height: 80%;
   margin: auto;
   background-color: rgb(36, 36, 36);
   border-radius: 3%;
   padding: 0;
-  -webkit-animation: fadein 2s forwards;
-          animation: fadein 2s forwards;
 }
 
-h2 {
+.animated h2 {
   color: rgb(227, 227, 61);
   text-align: center;
   padding: 5rem;
   font-size: 70px;
-  -webkit-animation: fadein 2s forwards;
-          animation: fadein 2s forwards;
 }
 
-p {
+.animated p {
   text-align: center;
   color: white;
   padding: 0 10%;
   font-size: 24px;
-  -webkit-animation: fadein 2s forwards;
-          animation: fadein 2s forwards;
+}
+
+.fadein {
+  -webkit-animation: fadeinbuttom 2s forwards;
+          animation: fadeinbuttom 2s forwards;
 }
 
 .work {
@@ -240,7 +243,7 @@ p {
     width: 600px;
   }
 }
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadeinbuttom {
   0% {
     opacity: 0;
     transform: translateY(300px);
@@ -250,7 +253,7 @@ p {
     transform: translateY(0px);
   }
 }
-@keyframes fadein {
+@keyframes fadeinbuttom {
   0% {
     opacity: 0;
     transform: translateY(300px);
