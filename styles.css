@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
 html {
-  scroll-behavior: auto;
+  overflow: hidden;
+}
+
+footer {
+  text-align: center;
+  color: white;
 }
 
 body {
@@ -11,15 +17,14 @@ body {
 /* navbar normal style */
 .navbar {
   display: flex;
+  flex-direction: none;
   align-items: center;
-  padding: 0px 2%;
   justify-content: flex-end;
+  padding: 0px 2%;
 }
-
 .navbar .navlink {
   list-style: none;
 }
-
 .navbar .navlink li {
   display: inline-block;
   padding: 0 15px;
@@ -27,7 +32,6 @@ body {
   margin-top: 2%;
   text-align: center;
 }
-
 .navbar .navlink a {
   color: rgb(50, 150, 150);
   text-decoration: none;
@@ -38,7 +42,7 @@ body {
   font-family: "Comfortaa", cursive;
 }
 
-a::after {
+li a::after {
   content: "";
   position: absolute;
   background-color: rgb(66, 197, 197);
@@ -49,13 +53,14 @@ a::after {
   transition: 0.5s;
 }
 
-.navbar .navlink a:hover, .navbar .navlink a.active {
+.navbar .navlink a:hover,
+.navbar .navlink a.active {
   color: rgb(227, 227, 61);
   font-size: 22px;
   transition: 0.5s;
 }
 
-a:hover:after {
+li a:hover:after {
   width: 100%;
 }
 
@@ -66,11 +71,12 @@ button {
 /* home */
 .bgflex {
   display: flex;
+  flex-direction: none;
+  align-items: center;
+  justify-content: center;
   margin-top: 5%;
   height: 100vh;
   text-align: center;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
@@ -88,6 +94,9 @@ h1 {
 
 .Home {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
 }
 
@@ -102,32 +111,45 @@ h1 {
           animation: reveal 7s forwards;
 }
 
-.slide .span {
+.mid {
   margin-left: -355px;
   -webkit-animation: slidein 7s forwards;
           animation: slidein 7s forwards;
 }
 
-#aboutanime {
+.nextPage {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  bottom: 15rem;
+  -webkit-animation: showup 10s forwards;
+          animation: showup 10s forwards;
+}
+.nextPage i {
+  color: white;
+  font-size: 3rem;
+  -webkit-animation: goDown 2s infinite;
+          animation: goDown 2s infinite;
+}
+
+.aboutanima {
   width: 100%;
-  height: 100vh;
   background: rgb(16, 16, 16);
+  visibility: hidden;
 }
 
 .container {
   display: grid;
-}
-
-.container {
-  width: 65%;
-  height: 80%;
+  justify-content: space-around;
+  width: 80%;
+  height: 40rem;
   margin: auto;
   background-color: rgb(36, 36, 36);
   border-radius: 3%;
-  padding: 0;
 }
 
 .animated h2 {
+  font-family: "Comfortaa", cursive;
   color: rgb(227, 227, 61);
   text-align: center;
   padding: 5rem;
@@ -139,19 +161,274 @@ h1 {
   color: white;
   padding: 0 10%;
   font-size: 24px;
+  font-family: "Nunito", sans-serif;
+}
+.animated p .tag {
+  border-radius: 100px 100px 100px 100px;
+  margin: 0.5rem 0.5rem;
+  padding: 0rem 1rem 0rem 1rem;
+}
+.animated p .firstTag {
+  background: rgb(216, 135, 36);
+}
+.animated p .secondTag {
+  background: rgb(83, 140, 206);
+}
+.animated p .thirdTag {
+  background: rgb(227, 227, 61);
+}
+.animated p .sass {
+  background: rgb(227, 83, 107);
+}
+.animated p .boots {
+  color: rgb(166, 46, 166);
+  background: violet;
 }
 
 .fadein {
   -webkit-animation: fadeinbuttom 2s forwards;
           animation: fadeinbuttom 2s forwards;
+  visibility: visible;
 }
 
-.work {
+.nextPageToWorks {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  bottom: 0rem;
+  -webkit-animation: showup 10s forwards;
+          animation: showup 10s forwards;
+}
+.nextPageToWorks i {
+  color: white;
+  font-size: 3rem;
+  -webkit-animation: goDown 2s infinite;
+          animation: goDown 2s infinite;
+}
+
+.previuosToME {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 13rem;
+  z-index: 100;
+}
+.previuosToME .goup {
+  color: white;
+  font-size: 3rem;
+  margin-right: 1rem;
+  -webkit-animation: goUp 2s infinite;
+          animation: goUp 2s infinite;
+}
+
+.works {
+  display: grid;
+  flex-direction: none;
+  align-items: none;
+  justify-content: none;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 8rem;
   width: 100%;
-  height: 100vh;
   color: rgb(16, 16, 16);
+  padding: 80px 80px 50px 80px;
+  text-align: center;
+  flex-wrap: nowrap;
+}
+.works .text:hover h3 {
+  color: rgb(66, 197, 197);
+  font-size: 35px;
+  transition: 0.75s;
+}
+.works .text:hover p .details {
+  opacity: 1;
+  transition: 0.5s;
+}
+.works a {
+  text-decoration: none;
+  color: white;
+}
+.works h3 {
+  font-family: "Comfortaa", cursive;
+  color: rgb(227, 227, 61);
+  text-align: center;
+  margin: 3rem;
+  transition: 0.75s;
+}
+.works p {
+  font-family: "Nunito", sans-serif;
+}
+.works p .details {
+  opacity: 0;
+  transition: 0.5s;
+}
+.works .tag {
+  border-radius: 100px 100px 100px 100px;
+  margin: 0.5rem 0.5rem;
+  padding: 0rem 1rem 0rem 1rem;
+}
+.works .firstTag {
+  background: rgb(216, 135, 36);
+}
+.works .secondTag {
+  background: rgb(83, 140, 206);
+}
+.works .thirdTag {
+  background: rgb(227, 227, 61);
+}
+.works .sass {
+  background: rgb(227, 83, 107);
+}
+.works .boots {
+  color: rgb(166, 46, 166);
+  background: violet;
 }
 
+.upIn {
+  -webkit-animation: upInAnimation 2s forwards;
+          animation: upInAnimation 2s forwards;
+  visibility: visible;
+}
+
+.thirdPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 3rem;
+  -webkit-animation: showup 10s forwards;
+          animation: showup 10s forwards;
+}
+.thirdPage i {
+  color: white;
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+.thirdPage .godown {
+  -webkit-animation: goDown 2s infinite;
+          animation: goDown 2s infinite;
+}
+
+.contacts {
+  margin-top: 15rem;
+}
+.contacts p {
+  position: relative;
+  text-align: center;
+  top: 8rem;
+  font-family: "Comfortaa", cursive;
+  font-size: 50px;
+  padding-top: 35PX;
+  color: white;
+}
+
+#CONTACT {
+  height: 70vh;
+  color: white;
+  margin: auto;
+  -webkit-animation: showup 3s forwards;
+          animation: showup 3s forwards;
+}
+#CONTACT a {
+  text-decoration: none;
+  font-size: 80px;
+}
+
+.icons {
+  position: relative;
+  top: 10rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons a:nth-child(1) {
+  color: rgb(209, 49, 49);
+}
+
+.icons a:nth-child(1):hover {
+  color: rgb(182, 34, 34);
+}
+
+.icons a:nth-child(3) {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contactText {
+  -webkit-animation: showup 10s forwards;
+          animation: showup 10s forwards;
+}
+
+.leftSlideIn {
+  -webkit-animation: fadeInSocialMedia 3s forwards;
+          animation: fadeInSocialMedia 3s forwards;
+}
+
+.previousToWork {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 23rem;
+  z-index: 150;
+}
+.previousToWork .lastGoUp {
+  color: white;
+  font-size: 3rem;
+  margin-right: 1rem;
+  -webkit-animation: goUp 2s infinite;
+          animation: goUp 2s infinite;
+}
+
+.lastPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  opacity: 0;
+}
+.lastPage i {
+  position: relative;
+  right: -6rem;
+  color: white;
+  font-size: 3rem;
+  margin-right: 1rem;
+  -webkit-animation: goUpest 2s infinite;
+          animation: goUpest 2s infinite;
+}
+.lastPage p {
+  position: relative;
+  top: 1rem;
+  color: white;
+  margin-top: 3rem;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.lastPage:hover {
+  opacity: 0;
+}
+.lastPage:hover p {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.showIt {
+  -webkit-animation: showup 10s forwards;
+          animation: showup 10s forwards;
+}
+
+@media (prefers-reduced-motion) {
+  .fadein {
+    transition: none;
+  }
+  .upIn {
+    transition: none;
+  }
+}
 @-webkit-keyframes showup {
   0% {
     opacity: 0;
@@ -163,7 +440,6 @@ h1 {
     opacity: 1;
   }
 }
-
 @keyframes showup {
   0% {
     opacity: 0;
@@ -246,44 +522,180 @@ h1 {
 @-webkit-keyframes fadeinbuttom {
   0% {
     opacity: 0;
-    transform: translateY(300px);
+    transform: translatex(400px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translatex(0px);
   }
 }
 @keyframes fadeinbuttom {
   0% {
     opacity: 0;
-    transform: translateY(300px);
+    transform: translatex(400px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translatex(0px);
   }
 }
-@media (max-width: 570px) {
-  #spacecontrol {
-    display: none;
+@-webkit-keyframes upInAnimation {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translatey(200px);
+    transition: all 1s;
   }
-  ul {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: rgb(16, 16, 16);
-    top: 80px;
-    align-items: initial;
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translatey(0%);
+    transition: all 1s;
   }
-  .navbar .navlink li {
-    display: block;
+}
+@keyframes upInAnimation {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translatey(200px);
+    transition: all 1s;
   }
-  .navbar {
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translatey(0%);
+    transition: all 1s;
+  }
+}
+@-webkit-keyframes fadeInSocialMedia {
+  0% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translatex(-400px);
+    transition: all 1s;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translatex(0px);
+    transition: all 1s;
+  }
+}
+@keyframes fadeInSocialMedia {
+  0% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translatex(-400px);
+    transition: all 1s;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translatex(0px);
+    transition: all 1s;
+  }
+}
+@-webkit-keyframes goDown {
+  0% {
+    transform: translatey(0px);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(35%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    transform: translatey(0px);
+  }
+}
+@keyframes goDown {
+  0% {
+    transform: translatey(0px);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(35%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    transform: translatey(0px);
+  }
+}
+@-webkit-keyframes goUp {
+  0% {
+    transform: translatey(0px);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(-35%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    transform: translatey(0px);
+  }
+}
+@keyframes goUp {
+  0% {
+    transform: translatey(0px);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(-35%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    transform: translatey(0px);
+  }
+}
+@-webkit-keyframes goUpest {
+  0% {
+    transform: translatey(50px);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-35%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    transform: translateY(50px);
+  }
+}
+@keyframes goUpest {
+  0% {
+    transform: translatey(50px);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-35%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    transform: translateY(50px);
+  }
+}
+@media (max-width: 840px) {
+  html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .animated h2 {
+    padding: 2rem;
+  }
+  .works {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: none;
+    align-items: flex-start;
     justify-content: center;
-    padding: 10px 2%;
   }
-  .navbar .navlink li {
-    padding: 40px 10px;
+  .i {
+    visibility: hidden;
   }
 }
 @media (max-width: 795px) {
@@ -330,6 +742,42 @@ h1 {
       opacity: 1;
       width: 390px;
     }
+  }
+  .container {
+    width: 100%;
+    height: 42rem;
+  }
+  .animated h2 {
+    font-size: 50px;
+  }
+  .social {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 570px) {
+  #spacecontrol {
+    display: none;
+  }
+  ul {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgb(16, 16, 16);
+    top: 80px;
+    align-items: initial;
+  }
+  .navbar .navlink li {
+    display: block;
+  }
+  .navbar {
+    justify-content: center;
+    padding: 10px 2%;
+  }
+  .navbar .navlink li {
+    padding: 40px 10px;
+  }
+  .animated p {
+    font-size: 18px;
   }
 }
 @media (max-width: 567px) {
@@ -422,5 +870,8 @@ h1 {
       opacity: 1;
       width: 170px;
     }
+  }
+  .animated h2 {
+    font-size: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */

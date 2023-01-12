@@ -20,9 +20,8 @@
 </head>
 
 <body>
-
     <!-- nav bar -->
-    <header class="navbar">
+    <header class="navbar" id="navbar">
         <nav class="navbar navbar-expand-sm navbar-dark ">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
@@ -33,53 +32,122 @@
                     <div class="navbar-nav">
                         <ul class="navlink">
                             <li><a href="Home" class="active">Home</a></li>
-                            <li><a href="about">About me</a></li>
-                            <li><a href="work">Works</a></li>
-                            <li><a href="contact">Contact</a></li>
+                            <li><a href="#ME">About me</a></li>
+                            <li><a href="#WORK">Works</a></li>
+                            <li><a href="#CONTACT">Contact</a></li>
                         </ul>
-
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" data-offset="0" tabindex="0"
+        id="HOME">
+        <div class="bgflex">
+            <!-- Home impression  -->
+            <div class="Home">
+                <div class="firstLetter">
+                    <h1>Hi </h1>
+                </div>
+                <div class="secondLetterSection">
+                    <span class="secondLetter">
+                        <h1> I'm Jun</h1>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="nextPage">
+            <a href="#ME"><i class="fa-solid fa-chevron-down i"></i></a>
+        </div>
 
-    <div class="bgflex">
-        <!-- Home impression  -->
-        <div class="Home">
-            <div class="first">
-                <h1>Hi </h1>
+        <section class="aboutanima" id="ME">
+            <div class="container">
+                <div class="animated">
+                    <h2>About Me</h2>
+                    <p>My fullname is JunHao Liu but you can call me Jun, I'm a Junior developer based in Spain, I'm very
+                        interested about the huge world of development specially on AI but at the moment I don't have
+                        enough knowledge so one of my goals is create or implement one in my future projects, my hobbies are digital drawing, listen music and play
+                        videogames.
+                    </p>
+                    <p>I have knowledge of <span class="tag firstTag"><i class="fa-brands fa-html5"></i> html
+                        </span><span class="tag secondTag"><i class="fa-brands fa-css3-alt"></i> css </span><span
+                            class="tag thirdTag"><i class="fa-brands fa-js"></i> js </span><i
+                            class="fa-brands fa-sass tag sass"></i> <i class="fa-brands fa-bootstrap tag boots"></i></p>
+                    <!-- <p> and basic knowledge of </p> -->
+                </div>
             </div>
-            <div class="slide">
-                <span class="mid">
-                    <h1> I'm Jun</h1>
-                </span>
+        </section>
+        <div class="nextPageToWorks">
+            <a href="#WORK"><i class="fa-solid fa-chevron-down i"></i></a>
+        </div>
+        <div class="previuosToME">
+            <a href="#ME"><i class="fa-solid fa-chevron-up goup i"></i></a>
+        </div>
+        <section class="work_animation" id="WORK">
+            <div class="works">
+                <div class="text ecommerce">
+                    <a href="">
+                        <h3>E-commerce UI + some functionality + responsive</h3>
+                        <p><span class="tag firstTag"><i class="fa-brands fa-html5"></i> html </span><span
+                                class="tag thirdTag"><i class="fa-brands fa-js"></i> js </span><i
+                                class="fa-brands fa-sass tag sass"></i><i class="fa-brands fa-bootstrap tag boots"></i>
+                        </p>
+                        <p><span class="details"> A simple UI design of comercial-website that have offcanvas for
+                                personal acount, functionalitys includes add products to shopping list, click shopping
+                                cart icon to open shopping cart overlay, remove products from shopping list, filter
+                                products by their category, other funtions like product details all by basic DOM
+                                manipulation(DOM is still confusing to me)</span></p>
+                    </a>
+                </div>
+                <div class="text Portafolio">
+                    <a href="">
+                        <h3>My Portafolio Web</h3>
+                        <p><span class="tag firstTag"><i class="fa-brands fa-html5"></i> html </span><span
+                                class="tag secondTag"><i class="fa-brands fa-css3-alt"></i> css </span><span
+                                class="tag thirdTag"><i class="fa-brands fa-js"></i> js </span><i
+                                class="fa-brands fa-sass tag sass"></i></p>
+                        <p><span class="details">This is my first Front-End projects, this website will be my portafolio
+                                of all my projects but in future( I hope it's not that far) this will be upgrade when I
+                                know how to work with Frameworks properly making projects more interactive and efficient </span></p>
+                    </a>
+                </div>
+                <div class="text inprogress">
+                    <a href="">
+                        <h3>Work in progress</h3>
+                        <p>
+                        </p>
+                    </a>
+                </div>
             </div>
+        </section>
+
+        <div class="thirdPage">
+            <a href="#CONTACT"><i class="fa-solid fa-chevron-down godown i"></i></a>
+        </div>
+        <div class="previousToWork">
+            <a href="#WORK"><i class="fa-solid fa-chevron-up lastGoUp i"></i></a>
+        </div>
+        <div class="contacts">
+            <p class="contacts_animation">
+                contact:
+            </p>
+            <div class="socialMedia" id="CONTACT">
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-at social"></i></i>
+                        <a href=""><i class="fa fa-linkedin social" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram social" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="lastPage">
+            <a href="#navbar"><i class="fa-solid fa-angles-up lastGoUpest i"></i></a>
+            <p>click the icon to go the starting page</p>
         </div>
     </div>
-
-    <section id="aboutanime">
-        <div class="container">
-            <div class="animated">
-                <h2>About Me</h2>
-                <p>My name is JunHao Liu but you can call me Jun, I'm a Junior developer based in Spain, I'm very
-                    interested
-                    about the huge world of development in general so I will keep going on them, I love art, music and
-                    videogames :)</p>
-
-            </div>
-        </div>
-
-    </section>
-
-    <div class="works">
-        <div class="box1">
-            <a href="">work1</a>
-        </div>
-
-    </div>
-
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
 </body>
+
 
 </html>
