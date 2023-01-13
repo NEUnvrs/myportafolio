@@ -694,6 +694,9 @@ h1 {
     align-items: flex-start;
     justify-content: center;
   }
+  .works p .details {
+    opacity: 1;
+  }
   .i {
     visibility: hidden;
   }

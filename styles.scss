@@ -616,6 +616,12 @@ h1 {
   .works {
     flex-wrap: wrap;
     @include pageAdjust(flex, none, flex-start, center);
+    p{
+      .details{
+        opacity: 1;
+      }
+      
+    }
   }
 
   .i {
