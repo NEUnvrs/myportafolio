@@ -243,6 +243,9 @@ h1 {
   opacity: 1;
   transition: 0.5s;
 }
+.works .text:hover p .link {
+  text-decoration: underline;
+}
 .works a {
   text-decoration: none;
   color: white;
