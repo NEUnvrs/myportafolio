@@ -49,7 +49,6 @@ window.addEventListener("scroll", (e) =>{
         last.classList.remove("showIt");
     }
 
-    console.log(scrollToTop)
 })
 
 const animaElement = document.querySelectorAll(['.container', '.works', '.contacts_animation', '.icons', '.firstLetter', '.secondLetterSection', '.secondLetter']);

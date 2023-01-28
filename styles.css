@@ -10,7 +10,7 @@ footer {
 }
 
 body {
-  background-color: rgb(16, 16, 16);
+  background-color: rgb(23, 23, 23);
   width: auto;
 }
 
@@ -134,7 +134,7 @@ h1 {
 
 .aboutanima {
   width: 100%;
-  background: rgb(16, 16, 16);
+  background: rgb(23, 23, 23);
   visibility: hidden;
 }
 
@@ -229,7 +229,7 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   margin-top: 8rem;
   width: 100%;
-  color: rgb(16, 16, 16);
+  color: rgb(23, 23, 23);
   padding: 80px 80px 50px 80px;
   text-align: center;
   flex-wrap: nowrap;
@@ -656,7 +656,7 @@ h1 {
 }
 @-webkit-keyframes goUpest {
   0% {
-    transform: translatey(50px);
+    transform: translatey(25px);
     opacity: 0.6;
   }
   25% {
@@ -665,12 +665,12 @@ h1 {
   }
   100% {
     opacity: 0.6;
-    transform: translateY(50px);
+    transform: translateY(25px);
   }
 }
 @keyframes goUpest {
   0% {
-    transform: translatey(50px);
+    transform: translatey(25px);
     opacity: 0.6;
   }
   25% {
@@ -679,7 +679,7 @@ h1 {
   }
   100% {
     opacity: 0.6;
-    transform: translateY(50px);
+    transform: translateY(25px);
   }
 }
 @media (max-width: 840px) {

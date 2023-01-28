@@ -2,7 +2,7 @@ $blue: rgb(66, 197, 197);
 $secondBLue: rgb(33, 169, 169);
 $red: rgb(209, 49, 49);
 $secondRed: rgb(182, 34, 34);
-$bg: rgb(16, 16, 16);
+$bg: rgb(23, 23, 23);
 $secbg: rgb(36, 36, 36);
 $yellow: rgb(227, 227, 61);
 $htmlcolor: rgb(216, 135, 36);
@@ -590,7 +590,7 @@ h1 {
 
 @keyframes goUpest {
   0% {
-    transform: translatey(50px);
+    transform: translatey(25px);
     opacity: .6;
   }
 
@@ -602,7 +602,7 @@ h1 {
 
   100% {
     opacity: 0.6;
-    transform: translateY(50px);
+    transform: translateY(25px);
   }
 }
 
