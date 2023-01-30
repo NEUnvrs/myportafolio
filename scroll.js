@@ -13,15 +13,6 @@ const observer = new IntersectionObserver((entries) => {
             else if(entry.target.classList == 'icons'){
                 entry.target.classList.add("leftSlideIn");
             }
-            else if(entry.target.classList == 'firstLetter'){
-                entry.target.classList.add("first");
-            }
-            else if(entry.target.classList == 'secondLetterSection'){
-                entry.target.classList.add("slide");
-            }
-            else if(entry.target.classList == 'secondLetter'){
-                entry.target.classList.add("mid");
-            }
 
 
             
@@ -31,9 +22,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.remove("upIn");
             entry.target.classList.remove("contactText");
             entry.target.classList.remove("leftSlideIn");
-            entry.target.classList.remove("first");
             entry.target.classList.remove("slide");
-            entry.target.classList.remove("mid");
         }
 
     });
@@ -51,7 +40,7 @@ window.addEventListener("scroll", (e) =>{
 
 })
 
-const animaElement = document.querySelectorAll(['.container', '.works', '.contacts_animation', '.icons', '.firstLetter', '.secondLetterSection', '.secondLetter']);
+const animaElement = document.querySelectorAll(['.container', '.works', '.contacts_animation', '.icons', '.first', '.secondLetter']);
 const last = document.querySelector(".lastPage")
 animaElement.forEach((obs) => observer.observe(obs));
 

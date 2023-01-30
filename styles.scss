@@ -119,17 +119,43 @@ button {
 
 /* home */
 .bgflex {
-  @include pageAdjust(flex, none, center, center);
-  margin-top: 5%;
   height: 100vh;
-  text-align: center;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0);
-
-
+  .Home{
+    @include pageAdjust(flex, row, center, center);
+    position: relative;
+    top: 10rem;
+    .LetterSection {
+      @include pageAdjust(flex, row, center, center);
+      padding: 0rem 1rem;
+      opacity: 0;
+    }
+    .first{
+      animation: slide 2s forwards;
+    }
+    .second{
+      animation: showup 4s forwards;
+      animation-delay: 1.5s;
+    }
+    
+    
+  }
+  .description {
+    @include pageAdjust(flex, row, center, center);
+    position: relative;
+    top: 10rem;
+    opacity: 0;
+    text-align: center;
+    h1{
+      font-size: 6rem;
+    }
+  }
+  .third{
+    animation: showup 10s forwards;
+    animation-delay: 2.5s;
+  }
 }
+
+
 
 h1 {
   font-size: 140px;
@@ -137,35 +163,15 @@ h1 {
   background: -webkit-linear-gradient(66deg, $yellow 0%, $blue 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: -200px;
 }
 
-.Home {
-  @include pageAdjust(flex, row, center, center);
-  white-space: nowrap;
 
-}
-
-.first {
-  animation: showup 7s forwards;
-}
-
-.slide {
-  width: 0%;
-  animation: reveal 7s forwards;
-  
-}
-
-.mid {
-  margin-left: -355px;
-  animation: slidein 7s forwards;
-}
 
 .nextPage {
   display: flex;
   justify-content: space-around;
   position: relative;
-  bottom: 15rem;
+  bottom: 10rem;
   animation: showup 10s forwards;
 
   i {
@@ -196,7 +202,9 @@ h1 {
 
 .animated h2 {
   font-family: 'Comfortaa', cursive;
-  color: $yellow;
+  background: -webkit-linear-gradient(66deg, $yellow 0%, $blue 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   padding: 5rem;
   font-size: 70px;
@@ -214,7 +222,7 @@ h1 {
 }
 
 .fadein {
-  animation: fadeinbuttom 2s forwards;
+  animation: slideIn 2s forwards;
   visibility: visible;
 }
 
@@ -456,8 +464,8 @@ h1 {
     opacity: 0;
   }
 
-  20% {
-    opacity: 1;
+  40% {
+    opacity: .8;
   }
 
   100% {
@@ -465,50 +473,25 @@ h1 {
   }
 }
 
-@keyframes slidein {
+@keyframes slide {
   0% {
-    margin-left: -800px;
+    opacity: .5;
+    transform: translatex(250px);
   }
-
-  20% {
-    margin-left: -800px;
-  }
-
-  35% {
-    margin-left: 0px;
-  }
-
-  100% {
-    margin-left: 0px;
-  }
-}
-
-@keyframes reveal {
-  0% {
-    opacity: 0;
-    width: 0px;
-  }
-
-  20% {
+  
+  50%{
     opacity: 1;
-    width: 0px;
-  }
-
-  30% {
-    width: 600px;
-  }
-
-  80% {
-    opacity: 1;
+    transform: translateX(250PX);
   }
 
   100% {
     opacity: 1;
-    width: 600px;
+    transform: translatex(0px);
   }
 }
 
-@keyframes fadeinbuttom {
+
+@keyframes slideIn {
   0% {
     opacity: 0;
     transform: translatex(400px);
@@ -636,31 +619,13 @@ h1 {
 @media (max-width: 795px) {
   h1 {
     font-size: 100px;
-    margin-top: -150px;
   }
 
-  @keyframes reveal {
-    0% {
-      opacity: 0;
-      width: 0px;
-    }
-
-    20% {
-      opacity: 1;
-      width: 0px;
-    }
-
-    30% {
-      width: 390px;
-    }
-
-    80% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 1;
-      width: 390px;
+  .bgflex{
+    .description{
+      h1{
+        font-size: 4rem;
+      }
     }
   }
 
@@ -681,7 +646,14 @@ h1 {
   #spacecontrol {
     display: none;
   }
-
+  .bgflex{
+    .description{
+      h1{
+        font-size: 3rem;
+      }
+    }
+  }
+  
   ul {
     position: relative;
     width: 100%;
@@ -715,7 +687,6 @@ h1 {
 @media (max-width: 567px) {
   h1 {
     font-size: 60px;
-    margin-top: -150px;
   }
 
   @keyframes reveal {
@@ -747,34 +718,7 @@ h1 {
 @media (max-width: 332px) {
   h1 {
     font-size: 45px;
-    margin-top: -150px;
   }
-
-  @keyframes reveal {
-    0% {
-      opacity: 0;
-      width: 0px;
-    }
-
-    20% {
-      opacity: 1;
-      width: 0px;
-    }
-
-    30% {
-      width: 170px;
-    }
-
-    80% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 1;
-      width: 170px;
-    }
-  }
-
   .animated h2 {
     font-size: 30px;
   }
